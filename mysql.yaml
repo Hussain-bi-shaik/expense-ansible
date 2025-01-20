@@ -8,7 +8,7 @@
       state: installed
 
   - name: enable and start mysql service
-    anible.builtin.service
+    anible.builtin.service:
       name: mysqld
       state: started
       enabled: yes    
