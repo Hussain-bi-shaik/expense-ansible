@@ -16,4 +16,11 @@
   - name: removing html directory
     ansible.builtin.file:
       path: /usr/share/nginx/html
-      state: absent    
+      state: absent  
+
+  - name: download the frontend code
+    ansible.builtin.get_url:
+      url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+      dest: /tmp/frontend.zip
+      
+           
